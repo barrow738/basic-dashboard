@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --expanded-sn:12.5rem;
+    --collapsed-sn:3rem;
+    --nav-color:blue;
+    --top-bar-height:3rem
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 90%;
+    letter-spacing: 0.5px;
+}
+.auth-user{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.side-nav{
+    width: var(--expanded-sn);
+    background-color: var(--nav-color);
+    position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+}
+.main-content{
+    width: calc(100vw - var(--expanded-sn));
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100%;
+}
+.sidebar-menu{
+    list-style: none;
+    padding: 0.5rem;
+}
+.sidebar-menu li{
+    width: 100%;
+}
+.sidebar-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0.25rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.menu-toggler{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 0;
+}
+.bar-1,.bar-2{
+    display: block;
+    height: 2px;
+    background-color: var(--nav-color);
+}
+.bar-1{
+    width: 1rem;
+}
+.bar-2{
+    width: 1.5rem;
+    margin: 0.25rem 0;
+}
+.top-sect{
+    width: 100%;
+    height: var(--top-bar-height);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0002;
+    padding: 0.75rem;
+}
+.logo-sect{
+    border-bottom: 1px solid #0002;
+    height: var(--top-bar-height);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.sidenav-logo,.sidenav-fav-logo{
+    width: 70%;
+    filter: brightness(0) invert(1);
+}
+.sidenav-fav-logo{
+    width: 100%;
+}
+.collapsed{
+    --expanded-sn:3rem;
+}
+.collapsed .sidebar-menu span{
+    display: none;
+}
+.collapsed .sidenav-logo{
+    display: none;
+}
+.sidenav-fav-logo{
+    display: none;
+}
+.collapsed .sidenav-fav-logo{
+    display: block;
+}
