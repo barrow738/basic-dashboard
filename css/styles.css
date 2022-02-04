@@ -2,7 +2,7 @@
 :root{
     --expanded-sn:12.5rem;
     --collapsed-sn:3rem;
-    --nav-color:blue;
+    --nav-color:#00296b;
     --top-bar-height:3rem
 }
 *{
